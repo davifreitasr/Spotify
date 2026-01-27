@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.min.css">
+    <link href="./src/output.css" rel="stylesheet">
+    <script src="src/script.js" defer></script>
+    <title>Spotify - Web Player: Músicas para todas as pessoas</title>
+</head>
+<body class="bg-[#000000]">
+    <header>
+        <div class="bg-[#000000] text-[#ffffff] flex justify-between items-center gap-4 w-full p-3">
+            <div class="flex items-center w-[3%]">
+                <img src="/src/images/spotify-icon.png" alt="Spotify" class="w-full cursor-pointer" title="Spotify">
+            </div>
+            <div class="flex items-center gap-4">
+                <i class="ri-home-line bg-[#1f1f1f] text-[#a49e9e] flex justify-center items-center text-3xl rounded-full w-12 h-12 hover:bg-[#2a2a2a] hover:text-[#ffffff] cursor-pointer hover:scale-[1.03]"></i>
+                <div class="bg-[#1f1f1f] text-[#a49e9e] flex items-center gap-3 py-3 px-4 text-lg border border-transparent rounded-4xl hover:bg-[#2e2e2e] hover:border-[#414141] transition-colors duration-200 ease">
+                    <i class="ri-search-line text-2xl hover:text-white hover:scale-[1.02] cursor-pointer"></i>
+                    <input type="text" placeholder="What do you want to hear?" class="text-white font-semibold outline-none placeholder:text-[#a6a5a5]">
+                    <span>|</span>
+                    <i class="ri-folder-line text-2xl hover:text-white hover:scale-[1.02] cursor-pointer"></i>
+                </div>
+            </div>
+            <div class="text-[#a49e9e] flex items-center gap-4 font-bold">
+                <a href="#" class="hover:text-white hover:scale-[1.03]">Premium</a>
+                <a href="#" class="hover:text-white hover:scale-[1.03]">Support</a>
+                <a href="#" class="hover:text-white hover:scale-[1.03]">Download</a>
+            </div>
+            <span class="cursor-default">|</span>
+            <div class="text-[#a49e9e] flex items-center gap-4 w-fit font-bold">
+                <a href="#" class="flex items-center gap-2 hover:text-white hover:scale-[1.03]">
+                    <i class="ri-download-line"></i>
+                    Install App
+                </a>
+                <a href="#" class="hover:text-white hover:scale-[1.03]">Sing up</a>
+                <a href="#" class="bg-white text-[#000000] py-2 px-4 rounded-4xl hover:scale-[1.03]">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="text-white overflow-hidden mx-2">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 h-[70vh] mb-3">
+        <div class="bg-[#121212] flex flex-col gap-6 py-6 px-2 col-span-1 rounded-lg">
+        <div class="flex justify-between items-center font-bold">
+            <h2>Your Library</h2>
+            <button class="bg-[#1F1F1F] flex justify-center items-center gap-2 py-2 px-4 rounded-3xl hover:bg-[#282828] transition-colors duration-300 cursor-pointer">
+                <i class="ri-add-line font-light"></i>
+                <span>Create</span>
+            </button>
+        </div>
+        <div class="flex flex-col gap-4 bg-[#1F1F1F] p-4 font-bold rounded-xl">
+            <h2>Create your first playlist</h2>
+            <p class="text-[#dbdbdb] font-semibold text-sm">It's easy, we'll help you</p>
+            <button class="bg-white text-[#000000] text-sm w-[35%] py-1 rounded-3xl hover:scale-[1.03] cursor-pointer">Create playlist</button>
+        </div>
+        <div class="flex gap-4 w-[95%] my-4 mx-auto flex-wrap text-xs text-[#9d9d9d]">
+            <a href="#">Legal</a>
+            <a href="#">Safety & Privacy Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookies</a>
+            <a href="#">About Ads</a>
+            <a href="#">Accessibility</a>
+            <a href="#" class="text-white">Cookies</a>
+        </div>
+        <div class="w-[30%]">
+            <button class="flex justify-center gap-2 w-full py-2 text-sm border border-[#989898] rounded-4xl hover:border-white hover:scale-[1.03] cursor-pointer">
+                <i class="ri-global-fill"></i>
+                <span class="font-bold">English</span>
+            </button>
+        </div>
+        </div>
+
+        <div class="bg-[#121212] flex flex-col col-span-2 gap-8 w-full p-4 font-bold rounded-lg h-[70vh] cursor-default overflow-y-auto container">
+            
+            <div class="flex flex-col gap-4 relative">
+                <div class="flex justify-between ">
+                    <h2 class="text-2xl">Trending Songs</h2>
+                    <p class="text-[#c5c5c5] text-sm">Show all</p>
+                </div>
+                <div><i class="ri-arrow-left-s-line bg-[#333] flex justify-center items-center w-10 h-10 text-xl rounded-full absolute top-[50%] left-1"></i></div>
+                <div class="flex gap-4">
+                    <img src="src/images/admita.jpg" alt="Admita" class="musics">
+                    <img src="src/images/nunca-esquecido.jpg" alt="Nunca esquecido" class="musics"> 
+                    <img src="src/images/calcinha-renda.jpg" alt="Calcinha de Renda" class="musics"> 
+                    <img src="src/images/esquina.jpg" alt="Esquina" class="musics"> 
+                    <img src="src/images/traz-cerveja.jpg" alt="Traz uma cerveja urgente" class="musics">
+               </div>
+               <div><i class="ri-arrow-right-s-line bg-[#333] flex justify-center items-center w-10 h-10 text-xl rounded-full absolute top-[50%] right-1"></i></div>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                 <div class="flex justify-between">
+                    <h2 class="text-2xl">Popular Artists</h2>
+                    <p class="text-[#c5c5c5] text-sm">Show all</p>
+                 </div>
+                 <div class="flex gap-4">
+                    <img src="src/images/henrique-juliano.avif" alt="Henrique e Juliano" class="artists">
+                    <img src="src/images/diego-victor-hugo.avif" alt="Diego e Victor Hugo" class="artists">
+                    <img src="src/images/menos-mais.jpg" alt="Grupo Menos é Mais" class="artists">
+                    <img src="src/images/jorge-matheus.jpg" alt="Jorge e Matheus" class="artists">
+                    <img src="src/images/ze-neto-cristiano.webp" alt="Zé Neto e Cristiano" class="artists">
+                 </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="bg-blue-500 flex justify-between items-center w-full p-4 text-sm font-bold rounded-xl">
+            <div class="flex flex-col gap-1 cursor-default">
+                <h2>Preview of Spotify</h2>
+                <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+            </div>
+            <div>
+                <button class="bg-white text-[#000000] py-2 px-4 text-lg rounded-4xl hover:scale-[1.03] cursor-pointer">
+                    <a href="#">Sign up</a>
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
