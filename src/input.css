@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+:root {
+    --scrollbar: #655e5e;
+    --scrollbar-hover: #898989;
+    --box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    --bg-chevron: #333333;
+    --hover-chevron: #444444;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -12,17 +20,25 @@ body {
     display: flex;
 }
 
- .container-two::-webkit-scrollbar {
+.nav-top::-webkit-scrollbar {
+    width: 10px;
+}
+
+.nav-top::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar);
+}
+
+.nav-top::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-hover);
+}
+
+.container-two::-webkit-scrollbar {
     width: 1px;
 }
 
 .carrossel-musics,
 .carrossel-artists {
-    display: flex;
-    gap: .5rem;
-    overflow-x: auto;
     scrollbar-width: none;
-    scroll-behavior: smooth;
 }
 
 .musics {
@@ -31,7 +47,7 @@ body {
     min-width: 10em;
     border-radius: .3rem;
     transition: background 300ms ease;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+    box-shadow: var(--box-shadow);
 }
 
 .container-music {
@@ -53,67 +69,59 @@ body {
     background: linear-gradient(90deg,#A6339F 0%, #7F61C5 50%, #5A8DEE 100%);
 }
 
-.chevron-left-musics {
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 50%;
-    left: -10px;
-    border-radius: 50%;
-    background-color: #333333;
-    transition: background 200ms ease-in-out;
-    cursor: pointer;
-}
-
+.chevron-left-musics,
 .chevron-right-musics {
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
-    position: absolute;
-    top: 50%;
-    right: 5px;
     border-radius: 50%;
-    background-color: #333333;
+    background-color: var(--bg-chevron);
     transition: background 200ms ease-in-out;
     cursor: pointer;
 }
 
-.chevron-left-artists {
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
+.chevron-left-musics {
     position: absolute;
     top: 50%;
     left: -10px;
-    border-radius: 50%;
-    background-color: #333333;
-    transition: background 200ms ease-in-out;
-    cursor: pointer;
 }
 
+.chevron-right-musics {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+}
+
+.chevron-left-artists,
 .chevron-right-artists {
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
+    border-radius: 50%;
+    background-color: var(--bg-chevron);
+    transition: background 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.chevron-left-artists {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+}
+
+.chevron-right-artists {
     position: absolute;
     top: 50%;
     right: 5px;
-    border-radius: 50%;
-    background-color: #333333;
-    transition: background 200ms ease-in-out;
-    cursor: pointer;
 }
 
 .chevron-left-musics:hover,
 .chevron-right-musics:hover,
 .chevron-left-artists:hover,
 .chevron-right-artists:hover {
-    background-color: #444444;
+    background-color: var(--hover-chevron);
 }
 
 .container-artists {
@@ -125,5 +133,5 @@ body {
 }
 
 .container-artists:hover {
-    background-color: #444444;
+    background-color: var(--hover-chevron);
 }

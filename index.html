@@ -77,10 +77,21 @@
                 <span>Create</span>
             </button>
         </div>
-        <div class="flex flex-col gap-4 bg-[#1F1F1F] p-4 font-bold text-xs md:text-sm rounded-xl">
+        <div class="flex flex-col gap-4 h-[25vh] pt-4 overflow-auto nav-top">
+        <div class="flex flex-col gap-4 bg-[#1F1F1F] p-4 font-bold text-xs md:text-sm rounded-xl select-none">
             <h2>Create your first playlist</h2>
             <p class="text-[#dbdbdb] font-semibold">It's easy, we'll help you</p>
-            <button class="bg-white text-[#000000] w-[80%] md:w-[35%] py-1 rounded-3xl hover:scale-[1.03] cursor-pointer">Create playlist</button>
+            <button class="bg-white text-[#000000] w-[80%] md:w-[35%] py-1 rounded-3xl hover:scale-[1.03] cursor-pointer">
+                Create playlist
+            </button>
+        </div>
+        <div class="flex flex-col gap-4 bg-[#1F1F1F] p-4 font-bold text-xs md:text-sm rounded-xl select-none">
+            <h2>Let's find some podcasts to follow</h2>
+            <p class="text-[#dbdbdb] font-semibold">We'll keep you update on new episodies</p>
+            <button class="bg-white text-[#000000] w-[80%] md:w-[40%] py-1 rounded-3xl hover:scale-[1.03] cursor-pointer">
+                Browser podcasts
+            </button>
+        </div>
         </div>
         <div class="flex gap-4 w-[95%] my-4 mx-auto flex-wrap text-[8px] md:text-xs text-[#9d9d9d]">
             <a href="#">Legal</a>
@@ -111,7 +122,7 @@
                     <i class="ri-arrow-left-s-line hidden md:flex chevron-left-musics"></i>
                 </div>
 
-                <div class="carrossel-musics">
+                <div class="flex gap-2 overflow-auto scroll-smooth carrossel-musics">
 
                     <div class="flex flex-col w-full gap-2 container-music">
                         <img src="src/images/aperture.jpg" alt="Aperture" class="musics">
@@ -207,7 +218,7 @@
                         <p class="text-[#c5c5c5] text-xs md:text-sm hover:underline cursor-pointer">Show all</p>
                     </div>
                     <div><i class="ri-arrow-left-s-line hidden md:flex chevron-left-artists"></i></div>
-                    <div class="carrossel-artists">
+                    <div class="flex gap-2 overflow-auto scroll-smooth carrossel-artists">
                 
                         <div class="flex flex-col  items-center gap-4 container-artists">
                             <img src="src/images/thw-wekeend.jpg" alt="The Wekeend" class="artists">
