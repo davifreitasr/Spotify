@@ -9,14 +9,12 @@
     <script src="src/script.js" defer></script>
     <title>Spotify - Web Player: Músicas para todas as pessoas</title>
 </head>
-<body class="bg-[#000000]">
+<body class="bg-[#121212] pt-20">
     <header>
-        <div class="bg-[#000000] text-[#ffffff] flex justify-between items-center gap-4 w-full p-3">
-            <div class="flex items-center gap-2 w-[5%] md:w-[3%]">
+        <div class="bg-[#000000] text-[#ffffff] flex justify-between items-center gap-4 w-full p-3 fixed top-0 right-0 left-0 z-50">
+            <div class="flex items-center gap-2 w-[7%] md:w-[3%]">
                 <img src="/src/images/spotify-icon.png" alt="Spotify" class="w-full cursor-pointer" title="Spotify">
-                <img src="src/images/home.png" alt="Home"
-                    class="block md:hidden text-[#a49e9e] justify-center items-center  text-sm md:text-3xl rounded-full   hover:bg-[#2a2a2a] hover:text-[#ffffff] cursor-pointer hover:scale-[1.03]">
-                <img src="src/images/search.png" alt="Search" class="block md:hidden">
+                <span class="block md:hidden font-bold text-xl">Spotify</span>
             </div>
             <div class="flex justify-center items-center gap-4 w-[40%]">
                 <img src="src/images/home.png" alt="Home" class="bg-[#1f1f1f] text-[#a49e9e] hidden md:flex justify-center items-center w-12 h-12 rounded-full p-2 hover:bg-[#2a2a2a] hover:text-[#ffffff] cursor-pointer hover:scale-[1.03]">
@@ -39,15 +37,20 @@
                 <a href="#" class="hover:text-white hover:scale-[1.03]">Download</a>
             </div>
             <span class="hidden md:block cursor-default">|</span>
-            <div class="text-[#a49e9e] flex items-center gap-2 w-full md:w-fit font-bold text-xs md:text-base">
-                <a href="#" class="flex items-center gap-2 hover:text-white hover:scale-[1.03]">
+            <div class="text-[#a49e9e] flex justify-between items-center gap-2 w-full md:w-fit font-bold text-xs md:text-base">
+                
+                <div class="flex gap-4 justify-end w-full items-center">
+                    <a href="#" class="hidden md:flex items-center gap-2  hover:text-white hover:scale-[1.03]">
                     <i class="ri-arrow-down-circle-line"></i>
                     <span>Install App</span>
                 </a>
-                <a href="#" class="hover:text-white hover:scale-[1.03]">Sing up</a>
-                <a href="#" class="bg-white text-[#000000] py-2 px-4 rounded-4xl hover:scale-[1.03]">Login</a>
-                <div class="relative">
+                    <a href="#" class="hidden md:flex hover:text-white hover:scale-[1.03]">Sing up</a>
+                    <a href="#" class="hidden md:flex bg-white text-[#000000] py-2 px-4 rounded-4xl hover:scale-[1.03]">Login</a>
+                    <a href="#" class="flex md:hidden bg-white text-[#000000] py-2 px-4 rounded-4xl hover:scale-[1.03]">Open App</a>
                     <i class="ri-menu-line flex md:hidden" id="burguer"></i>
+                </div>
+                <div class="relative">
+                    
                     <div class="bg-[#282828] text-[#f9f9f9] hidden flex-col md:hidden justify-center items-center gap-4 w-34 p-2 text-xs font-bold absolute top-8 right-0 rounded-sm z-10" id="menu-mob">
                         <div class="flex justify-between w-full">
                             <a href="#" class="hover:text-white hover:scale-[1.03]">Premium</a>
@@ -67,256 +70,97 @@
         </div>
     </header>
 
-    <main class="text-white flex flex-col overflow-hidden mx-2">
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-2 h-[70vh] mb-3 w-full">
-        <nav class="bg-[#121212] flex flex-col gap-5 md:gap-6 py-6 px-2 md:col-span-1 text-xs md:text-base rounded-lg">
-        <div class="flex justify-between items-center font-bold">
-            <h2>Your Library</h2>
-            <button class="bg-[#1F1F1F] flex justify-center items-center gap-2 py-2 px-4 rounded-3xl hover:bg-[#282828] transition-colors duration-300 cursor-pointer">
-                <i class="ri-add-line font-light"></i>
-                <span>Create</span>
-            </button>
-        </div>
-        <div class="flex flex-col gap-4 h-[40dvh] md:h-[25dvh] pt-4 overflow-auto nav-top">
-        <div class="flex flex-col gap-4 bg-[#1F1F1F] p-4 font-bold text-xs md:text-sm rounded-xl select-none">
-            <h2>Create your first playlist</h2>
-            <p class="text-[#dbdbdb] font-semibold">It's easy, we'll help you</p>
-            <button class="bg-white text-[#000000] w-[80%] md:w-[35%] py-1 rounded-3xl hover:scale-[1.03] cursor-pointer">
-                Create playlist
-            </button>
-        </div>
-        <div class="flex flex-col gap-4 bg-[#1F1F1F] p-4 font-bold text-xs md:text-sm rounded-xl select-none">
-            <h2>Let's find some podcasts to follow</h2>
-            <p class="text-[#dbdbdb] font-semibold">We'll keep you update on new episodies</p>
-            <button class="bg-white text-[#000000] w-[80%] md:w-[40%] py-1 rounded-3xl hover:scale-[1.03] cursor-pointer">
-                Browser podcasts
-            </button>
-        </div>
-        </div>
-        <div class="flex gap-4 w-[95%] my-4 mx-auto flex-wrap text-[8px] md:text-xs text-[#9d9d9d]">
-            <a href="#">Legal</a>
-            <a href="#">Safety & Privacy Center</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Cookies</a>
-            <a href="#">About Ads</a>
-            <a href="#">Accessibility</a>
-            <a href="#" class="text-white hover:underline">Cookies</a>
-        </div>
-        <div class="w-[60%] md:w-[30%]">
-            <button class="flex justify-center gap-2 w-full py-2 text-xs md:text-sm border border-[#989898] rounded-4xl hover:border-white hover:scale-[1.03] cursor-pointer">
-                <i class="ri-global-fill"></i>
-                <span class="font-bold">English</span>
-            </button>
-        </div>
-    </nav>
+    <main class="text-white flex flex-col mx-2">
+        <div class="flex flex-col gap-2 h-screen mb-3 w-full">
+        
+            <div class="flex flex-col gap-2 my-4 mx-4 p-4 rounded-lg bg-[#2A2A2A]">
+                <div class="flex justify-between items-center gap-1">
+                    <div class="flex gap-1 items-center">
+                        <i class="ri-spotify-fill text-xl text-[#1ED760]"></i>
+                        <span class="font-bold text-sm text-[#1ED760]">Premium</span>
+                    </div>
+                    <div>
+                        <i class="ri-close-line text-2xl cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-1.5">
+                        <h2 class="font-bold text-xl">Listen without limits. Try 2 months of Premium Individual for R$1.99.</h2>
+                        <p class="text-sm text-[#939393]">Only R$23.90/month after. Cancel anytime.</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button class="py-2 px-4 rounded-3xl font-bold text-sm text-[#000000] bg-[#1ED760] hover:scale-[1.03] cursor-pointer">
+                            <a href="#">Try 2 mounth for R$1.99</a>
+                        </button>
+                        <button class="font-bold text-sm text-[#f4f4f4] hover:scale-[1.03]">
+                            <a href="#">View all plans</a>
+                        </button>
+                    </div>
+                    <div class="flex flex-col gap-1 font-semibold text-xs text-[#939393]">
+                        <p>Premium Individual only. R$1.99 for 2 months, then R$23.90 per month after. Offer only available if you haven't tried Premium before. <a href="#" class="underline">Terms apply.</a></p>
+                        <p>Offer ends February 14, 2026.</p>
+                    </div>
+                </div>
+            </div>
 
-        <div class="bg-[#121212] flex flex-col md:col-span-2  w-full py-4 pl-3 md:pl-8 font-bold rounded-lg h-[70vh] cursor-default overflow-hidden overflow-y-auto container-two">
+        <div class="flex flex-col w-full mx-auto py-4 font-bold rounded-lg cursor-default bg-[#121212] container-two ">
             
             <div class="flex flex-col gap-2 relative">
                 <div class="flex justify-between w-[95%]">
-                    <h2 class="text-xs md:text-2xl hover:underline cursor-pointer">Trending Songs</h2>
+                    <h2 class="ml-6 text-xs md:text-2xl hover:underline cursor-pointer">Trending Songs</h2>
                     <p class="text-[#c5c5c5] text-xs md:text-sm hover:underline cursor-pointer">Show all</p>
                 </div>
-
-                <div>
+            
+                <!-- <div>
                     <i class="ri-arrow-left-s-line hidden md:flex chevron-left-musics"></i>
+                </div> -->
+            
+                <div class="carrossel-musics overflow-hidden w-full">
+                    <div class="track-musics flex w-max">
+                        <div class="flex gap-2 scroll-smooth overflow-x-auto carrossel-musics">
+                            <div class="flex w-full gap-2 container-musics"></div>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="flex gap-2 overflow-auto scroll-smooth carrossel-musics">
-
-                    <div class="flex flex-col w-full gap-2 container-music">
-                        <img src="src/images/aperture.jpg" alt="Aperture" class="musics">
-                        <div class="flex flex-col">
-                            <h3>Aperture</h3>
-                            <p class="text-xs font-normal">Harry Styles</p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-2 container-music">
-                        <img src="src/images/atm.png" alt="ATM" class="musics">
-                        <h3>ATM</h3>
-                        <div class="flex gap-2 text-xs">
-                            <span class="bg-[#B3B3B3] text-[#000000] flex justify-center items-center w-4 font-bold rounded-sm">E</span>
-                            <p class="text-xs font-normal">Don Toliver</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-2 container-music">
-                        <img src="src/images/evil-jordan.jpg" alt="Evil Jordan" class="musics">
-                        <h3>Evil Jordan</h3>
-                        <div class="flex text-xs gap-2">
-                            <span class="bg-[#B3B3B3] text-[#000000] flex justify-center items-center w-4 font-bold rounded-sm">E</span>
-                            <p class="text-xs font-normal">Playboy Carti</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-2 container-music">
-                        <img src="src/images/parai.jpg" alt="Parai" class="musics">
-                        <h3>Parai</h3>
-                        <div>
-                            <p class="text-xs font-normal">Ursaru, Bote</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-2 container-music">
-                        <img src="src/images/cercel.png" alt="Cercel - Intro" class="musics">
-                        <h3>CERCEL - Intro</h3>
-                        <div>
-                            <p class="text-xs font-normal">CERCEL, Lolita</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-2 container-music">
-                        <img src="src/images/admita.jpg" alt="Admita" class="musics">
-                        <h3>Admita - Ao vivo</h3>
-                        <div>
-                            <p class="text-xs font-normal">Matheus & Kauan, Luana Prado</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-2 container-music">
-                        <img src="src/images/nunca-esquecido.jpg" alt="Nunca esquecido" class="musics">
-                        <h3>NUNCA ESQUECIDO</h3>
-                        <div>
-                            <p class="text-xs font-normal">Luan Pereira, Léo Foguete, MC Don Juan</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-2 container-music">
-                        <img src="src/images/esquina.jpg" alt="Esquina" class="musics">
-                        <h3>Esquina</h3>
-                        <div>
-                            <p class="text-xs font-normal">Felipe e Rodrigo</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-2 container-music">
-                        <img src="src/images/calcinha-renda.jpg" alt="Calcinha de Renda" class="musics">
-                        <h3>Calcinha de Renda</h3>
-                        <div>
-                            <p class="text-xs font-normal">Panda, Gusttavo Lima, MJ Records</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col gap-2 container-music">
-                        <img src="src/images/traz-cerveja.jpg" alt="Traz uma cerveja urgente" class="musics">
-                        <h3>Traz uma Cerveja Urgente</h3>
-                        <div>
-                            <p class="text-xs font-normal">Naiara Azevedo, Mayara & Maraisa</p>
-                        </div>
-                    </div>
-               </div>
-
-               <div>
-                    <i class="ri-arrow-right-s-line hidden md:flex chevron-right-musics"></i>
-                </div>
-                </div>
-
-                <div class="flex flex-col gap-2 md:gap-0 relative">
+                <div class="flex flex-col gap-2 md:gap-0 mx-2 relative">
                     <div class="flex justify-between w-[95%]">
-                        <h2 class="text-xs md:text-2xl hover:underline cursor-pointer">Popular Artists</h2>
+                        <h2 class="ml-6 text-xs md:text-2xl hover:underline cursor-pointer">Popular Artists</h2>
                         <p class="text-[#c5c5c5] text-xs md:text-sm hover:underline cursor-pointer">Show all</p>
                     </div>
-                    <div><i class="ri-arrow-left-s-line hidden md:flex chevron-left-artists"></i></div>
-                    <div class="flex gap-2 overflow-auto scroll-smooth carrossel-artists">
                 
-                        <div class="flex flex-col  items-center gap-4 container-artists">
-                            <img src="src/images/thw-wekeend.jpg" alt="The Wekeend" class="artists">
-                            <div class="flex flex-col">
-                                <h3>The Wekeend</h3>
-                                <p class="font-normal text-xs text-[#ccc]">Artist</p>
+                    <div class="carrossel-artists overflow-hidden w-full">
+                        <div class="track-artists flex w-max">
+                            <div class="flex gap-2 scroll-smooth overflow-x-auto carrossel-artists">
+                                <div class="flex items-center gap-4 container-artists"></div>
                             </div>
                         </div>
-                
-                        <div class="flex flex-col  items-center gap-4 container-artists">
-                            <img src="src/images/veigh.jpg" alt="Veigh" class="artists">
-                            <div class="flex flex-col">
-                                <h3>Veigh</h3>
-                                <p class="font-normal text-xs text-[#ccc]">Artist</p>
-                            </div>
-                        </div>
-                
-                        <div class="flex flex-col  items-center gap-4 container-artists">
-                            <img src="src/images/drake.webp" alt="Drake" class="artists">
-                            <div class="flex flex-col">
-                                <h3>Drake</h3>
-                                <p class="font-normal text-xs text-[#ccc]">Artist</p>
-                            </div>
-                        </div>
-                
-                        <div class="flex flex-col  items-center gap-4 container-artists">
-                            <img src="src/images/babasha.jpg" alt="Babasha" class="artists">
-                            <div class="flex flex-col">
-                                <h3>Babasha</h3>
-                                <p class="font-normal text-xs text-[#ccc]">Artist</p>
-                            </div>
-                        </div>
-                
-                        <div class="flex flex-col  items-center gap-4 container-artists">
-                            <img src="src/images/dani-mocanu.jpg" alt="Dani Mocanu" class="artists">
-                            <div class="flex flex-col">
-                                <h3>Dani Mocanu</h3>
-                                <p class="font-normal text-xs text-[#ccc]">Artist</p>
-                            </div>
-                        </div>
-                
-                        <div class="flex flex-col  items-center gap-4 container-artists">
-                            <img src="src/images/scarlxrd.jpg" alt="Scarlxrd" class="artists">
-                            <div class="flex flex-col">
-                                <h3>Scarlxrd</h3>
-                                <p class="font-normal text-xs text-[#ccc]">Artist</p>
-                            </div>
-                        </div>
-                
-                        <div class="flex flex-col  items-center gap-4 container-artists">
-                            <img src="src/images/lil-nas-x.jpg" alt="Lil Nas X" class="artists">
-                            <div class="flex flex-col">
-                                <h3>Lil Nas X</h3>
-                                <p class="font-normal text-xs text-[#ccc]">Artist</p>
-                            </div>
-                        </div>
-                
-                        <div class="flex flex-col  items-center gap-4 container-artists">
-                            <img src="src/images/jay-z.jpg" alt="JAY-Z" class="artists">
-                            <div class="flex flex-col">
-                                <h3>JAY-Z</h3>
-                                <p class="font-normal text-xs text-[#ccc]">Artist</p>
-                            </div>
-                        </div>
-                
-                        <div class="flex flex-col  items-center gap-4 container-artists">
-                            <img src="src/images/central-cee.jpg" alt="Central Cee" class="artists">
-                            <div class="flex flex-col">
-                                <h3>Central Cee</h3>
-                                <p class="font-normal text-xs text-[#ccc]">Artist</p>
-                            </div>
-                        </div>
-                
-                        <div class="flex flex-col  items-center gap-4 container-artists">
-                            <img src="src/images/reed-wonder.jpg" alt="Reed Wonder" class="artists">
-                            <div class="flex flex-col">
-                                <h3>Reed Woonder</h3>
-                                <p class="font-normal text-xs text-[#ccc]">Artist</p>
-                            </div>
-                        </div>
-                
                     </div>
-                    <div><i class="ri-arrow-right-s-line hidden md:flex chevron-right-artists"></i></div>
                 </div>
         </div>
         </div>
 
-        <div class="footer flex justify-between items-center gap-4 w-full p-2 md:p-4 text-[10px] md:text-sm rounded-xl cursor-pointer">
-            <div class="flex flex-col gap-0.5">
-                <h2 class="font-bold">Preview of Spotify</h2>
-                <p class="font-semibold">Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
-            </div>
-            <div>
-                <button class="bg-white text-[#000000] py-2 px-4 w-18 md:w-32 md:text-lg rounded-4xl hover:scale-[1.03] cursor-pointer">
-                    <a href="#" class="font-bold">Sign up</a>
-                </button>
-            </div>
-        </div>
+            
     </main>
+
+    <nav class="flex justify-around items-center py-3 fixed bottom-0 left-0 right-0 nav-bottom text-sm text-[#f4f4f4]">
+                <div class="flex flex-col items-center gap-0.5">
+                    <img src="src/images/home.png" alt="Home" class="w-6 h-6">
+                    <span>Home</span>
+                </div>
+                <div class="flex flex-col gap-0.5 items-center">
+                    <img src="src/images/search.png" alt="Search" class="w-6 h-6">
+                    <span>Search</span>
+                </div>
+                <div class="flex flex-col gap-0.5 items-center">
+                    <i class="ri-book-shelf-line text-2xl"></i>
+                    <span>Your Library</span>
+                </div>
+                <div class="flex flex-col gap-0.5 items-center">
+                    <i class="ri-spotify-fill text-2xl"></i>
+                    <span>Premium</span>
+                </div>
+            </nav>
 </body>
 </html>
